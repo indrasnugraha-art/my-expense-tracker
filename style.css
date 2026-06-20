@@ -2,28 +2,29 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: center;
 }
 
 .container {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 h2 {
     text-align: center;
     color: #333;
+    margin-top: 0;
 }
 
 .total-container {
     background-color: #eef2f7;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -32,15 +33,17 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
-input, button {
+input, select, button {
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
+    background-color: #fff;
+    -webkit-appearance: none; /* Smooth look on mobile iOS */
 }
 
 button {
@@ -49,6 +52,7 @@ button {
     border: none;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 button:hover {
@@ -58,20 +62,31 @@ button:hover {
 .expense-table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 .expense-table th, .expense-table td {
-    padding: 12px;
+    padding: 10px 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
+}
+
+.category-badge {
+    background-color: #3498db;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .delete-btn {
     background-color: #e74c3c;
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 4px 8px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
