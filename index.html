@@ -12,13 +12,20 @@
         
         <!-- Budget Summary -->
         <div class="total-container">
-            <h3>Total Spent: $<span id="total-amount">0.00</span></h3>
+            <h3>Total Spent: €<span id="total-amount">0.00</span></h3>
         </div>
 
         <!-- Expense Form -->
         <form id="expense-form">
-            <input type="text" id="expense-name" placeholder="Where did you spend it? (e.g., Groceries)" required>
-            <input type="number" id="expense-amount" placeholder="Amount ($)" step="0.01" required>
+            <input type="text" id="expense-name" placeholder="Where did you spend it? (e.g., Albert Heijn)" required>
+            <input type="number" id="expense-amount" placeholder="Amount (€)" step="0.01" required>
+            <select id="expense-category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food / Groceries</option>
+                <option value="Transport">Transport / Fuel</option>
+                <option value="Bills">Bills / Fixed Costs</option>
+                <option value="Entertainment">Entertainment / Leisure</option>
+            </select>
             <input type="date" id="expense-date" required>
             <button type="submit">Add Expense</button>
         </form>
@@ -28,13 +35,14 @@
             <thead>
                 <tr>
                     <th>Description</th>
+                    <th>Category</th>
                     <th>Amount</th>
                     <th>Date</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody id="expense-list">
-                <!-- Dynamic rows will go here -->
+                <!-- Dynamic rows go here -->
             </tbody>
         </table>
     </div>
