@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>💰 Expense Tracker</h2>
+        
+        <!-- Budget Summary -->
+        <div class="total-container">
+            <h3>Total Spent: $<span id="total-amount">0.00</span></h3>
+        </div>
+
+        <!-- Expense Form -->
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Where did you spend it? (e.g., Groceries)" required>
+            <input type="number" id="expense-amount" placeholder="Amount ($)" step="0.01" required>
+            <input type="date" id="expense-date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Expense List -->
+        <table class="expense-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list">
+                <!-- Dynamic rows will go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
